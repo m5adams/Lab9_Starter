@@ -90,9 +90,10 @@
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS && TrackJS.install({
-      token: "c59c2bcd1e424d01b10b2420a7d1d4f4"
+      token: "7fd13a318f2844d6ac8855c8a8ebfb28"
       // for more configuration options, see https://docs.trackjs.com
     });
+
 
     TrackJS.track('Testing TrackJS!');
 
@@ -116,7 +117,7 @@
         let firstNum = document.querySelector('#first-num').value;
         let secondNum = document.querySelector('#second-num').value;
         let operator = document.querySelector('#operator').value;
-        
+
         if (firstNum === "" || secondNum === "") {
           throw new SyntaxError();
         }
@@ -125,7 +126,7 @@
 
       } catch (err) {
         continueWithCalc = false;
-        console.log("Invalid values of first or second number")
+        console.error("Syntax Error: " + err.message)
       }
 
       finally {
